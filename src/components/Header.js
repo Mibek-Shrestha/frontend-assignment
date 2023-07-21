@@ -39,7 +39,7 @@ const Header = () => (
       >
         Home
       </Link>
-      <a href="#exercises" style={{ textDecoration: "none", color: "#3A1212" }}>
+      <a href="#products" style={{ textDecoration: "none", color: "#3A1212" }}>
         Products
       </a>
 

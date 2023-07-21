@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import ProductDetails from "../items/ProductDetails";
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -19,6 +21,7 @@ const SearchBar = () => {
           items.title.toLowerCase().includes(searchTerm) ||
           items.category.toLowerCase().includes(searchTerm)
       );
+      console.log(searchedExercise);
       setProduct(searchedExercise);
     }
     setSearchTerm("");
@@ -65,13 +68,35 @@ const SearchBar = () => {
           Search
         </button>
       </div>
-      {product.map((items) => (
-        <div key={items.id}>
-          <h1>{items.title}</h1>
-          <h2>{items.category}</h2>
-          <img src={items.image} alt={items.title} />
-        </div>
-      ))}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-around",
+          flexWrap: "wrap",
+          margin: "16px",
+          padding: "16px",
+        }}
+      >
+        {product.map((items) => (
+          <Link to={`/product/${items.id}`} key={items.id}>
+            <div
+              className="card"
+              style={{ width: "25rem", marginBlock: "15px" }}
+              key={items.id}
+            >
+              <img src={items.image} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">{items.title}</h5>
+              </div>
+              <ul className="list-group list-group-flush">
+                <li className="list-group-item">{items.category}</li>
+                <li className="list-group-item">Rs{items.price * 100}</li>
+              </ul>
+            </div>
+          </Link>
+        ))}
+      </div>
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
-import Sweety from "../assets/banner.jfif";
+import Sweety from "../assets/one.png";
 const HeroBanner = () => {
   return (
     <Box
@@ -28,7 +28,7 @@ const HeroBanner = () => {
       <Button
         variant="contained"
         color="error"
-        href="#exercises"
+        href=""
         sx={{
           backgroundColor: "#FF2625",
           padding: "10px",
@@ -41,14 +41,16 @@ const HeroBanner = () => {
         src={Sweety}
         alt="sweet hert photo"
         style={{
-          position: "absolute",
-          right: "40px",
-          top: "0px",
+          position: "relative",
+          right: "-500px",
+          top: "-130px",
           width: "700px",
-          height: "600px",
+          height: "630px",
           marginTop: "-330px",
+          backgroundSize: "cover",
         }}
       />
+      <br />
     </Box>
   );
 };
