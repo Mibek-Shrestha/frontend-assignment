@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SearchBar = () => {
-  const [searchQuery, setSearchQuery] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const onSearchInputChange = (e) => {
     // Add your search logic here
     setSearchTerm(e.target.value.toLowerCase());
-    setSearchQuery(e.target.value);
+
     // console.log(searchTerm);
   };
   const [product, setProduct] = useState([]);
@@ -79,10 +78,6 @@ const SearchBar = () => {
           padding: "16px",
         }}
       >
-        {searchQuery !== "" && searchTerm.length === 0 && (
-          <p>Product not found.</p>
-        )}
-
         {product.map((items) => (
           <Link to={`/product/${items.id}`} key={items.id}>
             <div
