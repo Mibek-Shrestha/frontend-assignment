@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const AllProducts = ({ products }) => {
   return (
     <>
@@ -11,6 +11,7 @@ const AllProducts = ({ products }) => {
           flexWrap: "wrap",
           margin: "16px",
           padding: "16px",
+          scrollBehavior: "smooth",
         }}
       >
         {products.map((items) => (
@@ -19,7 +20,9 @@ const AllProducts = ({ products }) => {
             style={{ width: "25rem", marginBlock: "15px" }}
             key={items.id}
           >
-            <img src={items.image} className="card-img-top" alt="..." />
+            <Link to={`/product/${items.id}`} key={items.id}>
+              <img src={items.image} className="card-img-top" alt="..." />
+            </Link>
             <div className="card-body">
               <h5 className="card-title">{items.title}</h5>
             </div>

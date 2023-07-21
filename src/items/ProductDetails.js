@@ -6,7 +6,7 @@ const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const ant = useContext(ProductContext);
-  console.log(ant);
+
   // Replace this with actual data fetching from an API
   // For simplicity, we use the same mock data here
 
@@ -36,7 +36,10 @@ const ProductDetails = () => {
               </i>
               <p class="card-text">{product.description}</p>
 
-              <p class="card-text"> Price Rs. {product.price * 100}</p>
+              <p class="card-text">
+                {" "}
+                <b>Price Rs. {product.price * 100}</b>
+              </p>
             </div>
           </div>
         </div>
