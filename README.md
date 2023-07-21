@@ -1,7 +1,13 @@
-# Getting Started with Create React App
+![productDetail](https://github.com/Mibek-Shrestha/frontend-assignment/assets/79530597/ffe65e1f-019f-48aa-8c42-7fc2ace63b59)# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
- Checkout my project(https://trendingclothes.vercel.app/)
+ #Checkout my project(https://trendingclothes.vercel.app/)
+ #ScreenShot
+ ![ladingPage](https://github.com/Mibek-Shrestha/frontend-assignment/assets/79530597/adb41ff6-ee33-450e-936f-5f1ea863b5bb)
+![search](https://github.com/Mibek-Shrestha/frontend-assignment/assets/79530597/57e5c32d-eadd-4cff-97b1-a650d8da9826)
+![productDetail](https://github.com/Mibek-Shrestha/frontend-assignment/assets/79530597/a3da6937-2ae3-4300-882c-93b5fbc99833)
+![eror](https://github.com/Mibek-Shrestha/frontend-assignment/assets/79530597/8a19efba-95e7-46fa-a5bd-2da92d6c4805)
+
 ## Available Scripts
 
 In the project directory, you can run:
